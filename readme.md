@@ -23,7 +23,7 @@ This script performs a specific task using Selenium and sends the result via ema
    target_password = "target_user_password"
 
    ### Email Details
-   receiver_emails = "["[email_1@gmail.com]", "[email_2@example.com]"]"
+   receiver_emails = "["email_1", "email_2"]"
    subject = "Target Schedule"
 
 ## Usage
