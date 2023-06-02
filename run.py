@@ -137,7 +137,7 @@ def web_driver(url, schedule_file_path, username, password):
             
         page_content = re.sub(r"Manage Shift", "\n", page_content, flags=re.IGNORECASE)
 
-        #Page outlines
+        # Page outlines
         schedule = []
         current_page = p + 1
         if (current_page==1):
@@ -154,7 +154,7 @@ def web_driver(url, schedule_file_path, username, password):
                 item = lines[i]
                 schedule.append((item))
 
-        #Mark END of message
+        # Mark END of message
         if (current_page==PAGES_TO_VIEW):
             schedule.append(f"\n---------- END ----------")
 
