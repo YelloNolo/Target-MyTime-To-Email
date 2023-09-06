@@ -5,8 +5,13 @@ This script performs a specific task using Selenium and sends the result via ema
 ## Prerequisites
 
 - Python 3.x
-- Chrome browser installed
-- ChromeDriver
+- Chrome (Browser must be installed)
+- ChromeDriver (check notes)
+
+## Notes
+
+- You may need to update "chromedriver.exe" to a version that matches your chrome install
+- You can find the lastest driver here: https://googlechromelabs.github.io/chrome-for-testing/#stable 
 
 ## Installation
 
