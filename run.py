@@ -5,18 +5,12 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import NoSuchElementException
 from dotenv import load_dotenv
 
 # Import necessary modules
 load_dotenv('.env')
 hwnd = win32gui.GetForegroundWindow()
-
-# Settings
-INITIAL_WAIT_TIME = 4
-BUTTON_WAIT_TIME = 1
-LONGER_WAIT_TIME = 2
-VERIFICATION_CODE_LENGTH = 6
-PAGES_TO_VIEW = 3
 
 # User Info
 url = os.getenv('url')
@@ -24,6 +18,20 @@ schedule_file_path = os.getenv('schedule_file_path')
 upload_script = os.getenv('upload_script')
 username = os.getenv('target_username')
 password = os.getenv('target_password')
+speed_str = os.getenv('run_speed')
+speed = int(speed_str)
+
+# Calculate increase in all wait times (for slow wifi)
+def calculate_adjusted_wait_time(wait_time):
+    return wait_time + ((wait_time * speed) * 0.5)
+
+# Settings
+INITIAL_WAIT_TIME = calculate_adjusted_wait_time(3)
+BUTTON_WAIT_TIME = calculate_adjusted_wait_time(1)
+LONGER_WAIT_TIME = calculate_adjusted_wait_time(2)
+LONGEST_WAIT_TIME = calculate_adjusted_wait_time(4)
+VERIFICATION_CODE_LENGTH = 6
+PAGES_TO_VIEW = 3
 
 def check_last_edit():
     try:
@@ -106,13 +114,23 @@ def web_driver(url, schedule_file_path, username, password):
         verification_code_input.send_keys(verification_code)
 
         verification_code_input.send_keys(Keys.ENTER)
-        time.sleep(BUTTON_WAIT_TIME)
+        time.sleep(LONGER_WAIT_TIME)
 
         yes_button = driver.find_element(By.XPATH, '//button[contains(@class, "MuiButton-root") and .//span[text()="YES"]]')
         yes_button.click()
-        time.sleep(6)
+        time.sleep(LONGER_WAIT_TIME)
     else:
         print("Skipped Login")
+
+    # Close "New Feature" popup
+    while True:
+        try:
+            New_Feature_Close = driver.find_element(By.XPATH, '//button[contains(@class, "MuiButtonBase-root") and contains(@class, "MuiIconButton-root") and contains(@class, "MuiIconButton-sizeMedium") and contains(@class, "css-1i993nt") and @aria-label="close"]')
+            New_Feature_Close.click()
+            time.sleep(BUTTON_WAIT_TIME)
+        except NoSuchElementException:
+            print("'X' not found, skipping...")
+            break
     
     for p in range(PAGES_TO_VIEW):
         if (p==0):
