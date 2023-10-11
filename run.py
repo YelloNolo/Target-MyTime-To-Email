@@ -133,12 +133,17 @@ def web_driver(url, schedule_file_path, username, password):
             break
     
     for p in range(PAGES_TO_VIEW):
-        if (p==0):
-            pass
+        if (p!=0):
+            try:
+                time.sleep(BUTTON_WAIT_TIME)
+                next_page_button = driver.find_element(By.XPATH, '//button[contains(@class, "MuiButtonBase-root") and contains(@class, "MuiIconButton-root") and contains(@class, "MuiIconButton-sizeLarge") and contains(@class, "jss91") and contains(@class, "css-1w8s6so") and @aria-label="Go To Next Week"]')
+                next_page_button.click()
+                time.sleep(BUTTON_WAIT_TIME)
+            except NoSuchElementException:
+                print("Next page button not found, skipping...")
+                break
         else:
-            next_page_button = driver.find_element(By.XPATH, '//button[contains(@class, "MuiButtonBase-root") and contains(@class, "MuiIconButton-root") and contains(@class, "MuiIconButton-sizeLarge") and contains(@class, "jss91") and contains(@class, "css-1w8s6so") and @aria-label="Go To Next Week"]')
-            next_page_button.click()
-            time.sleep(BUTTON_WAIT_TIME)
+            pass
 
         # Read the entire contents of the page
         page_content = driver.find_element(By.TAG_NAME, "body").text
