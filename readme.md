@@ -24,12 +24,16 @@
 4. Edit the `.env` file and update the following variables with your own values:
 
    ### User Info - Change username
+   ```
    target_username = "target_user_username"
    target_password = "target_user_password"
+   ```
 
    ### Email Details
+   ```
    receiver_emails = "["email_1", "email_2"]"
    subject = "Target Schedule"
+   ```
 
 ## Usage
 
