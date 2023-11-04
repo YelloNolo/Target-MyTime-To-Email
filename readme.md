@@ -1,6 +1,6 @@
-# Script Description
+# MyTime Share
 
-This script performs a specific task using Selenium and sends the result via email.
+> Share mytime.target.com schedule by email 
 
 ## Prerequisites
 
