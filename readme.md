@@ -1,6 +1,8 @@
 # MyTime Share
 
-> Share mytime.target.com schedule by email 
+> Share mytime.target.com schedule by email
+
+Note: This script is buggy, and as I no longer work at target, I will not be maintaning it 🥲
 
 ## Prerequisites
 
@@ -11,7 +13,7 @@
 ## Notes
 
 - You may need to update "chromedriver.exe" to a version that matches your chrome install
-- You can find the lastest driver here: https://googlechromelabs.github.io/chrome-for-testing/#stable 
+- You can find the lastest driver here: https://googlechromelabs.github.io/chrome-for-testing/#stable
 
 ## Installation
 
