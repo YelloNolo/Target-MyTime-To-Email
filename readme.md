@@ -4,18 +4,18 @@
 
 Note: This script is buggy, and as I no longer work at target, I will not be maintaning it 🥲
 
-## Prerequisites
+## 📃 Prerequisites
 
 - Python 3.x
 - Chrome (Browser must be installed)
 - ChromeDriver (check notes)
 
-## Notes
+## 📒 Notes
 
 - You may need to update "chromedriver.exe" to a version that matches your chrome install
 - You can find the lastest driver here: https://googlechromelabs.github.io/chrome-for-testing/#stable
 
-## Installation
+## ⬇️ Installation
 
 1. Clone the repository or download the script.
 2. Install the required dependencies by running the following command:
@@ -37,7 +37,7 @@ Note: This script is buggy, and as I no longer work at target, I will not be mai
    subject = "Target Schedule"
    ```
 
-## Usage
+## 🪴 Usage
 
 1. Run the script `run.py`.
 2. The script will perform the following steps:
@@ -49,7 +49,7 @@ Note: This script is buggy, and as I no longer work at target, I will not be mai
    - Send the saved schedule via email.
 3. Follow the prompts in the terminal to proceed or exit.
 
-### Obtaining Google Email SMTP Server Details
+### 📧 Obtaining Google Email SMTP Server Details
 
 To obtain the SMTP server details for Google email, follow these steps:
 
@@ -73,6 +73,6 @@ To obtain the SMTP server details for Google email, follow these steps:
     - Once you have the port number, update the `smtp_port` variable in the `.env` file, replacing `###` with the appropriate port number.
 
 
-## License
+## 🪪 License
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/YelloNolo/Target-TimeTransfer-Public">Target TimeTransfer Public</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yello.page">Alec Murphy</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>
