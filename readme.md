@@ -1,15 +1,17 @@
-# Script Description
+# MyTime Share
 
-This script performs a specific task using Selenium and sends the result via email.
+> Share mytime.target.com schedule by email
 
-## Prerequisites
+Note: This script is buggy, and as I no longer work at target, I will not be maintaning it 🥲
+
+## 📃 Prerequisites
 
 - Python 3.10.11
 - Chrome (Browser must be installed)
 - ChromeDriver (check notes)
 - Conda: https://docs.conda.io/projects/miniconda/en/latest/
 
-## Notes
+## 📒 Notes
 
 - You may need to update "chromedriver.exe" to a version that matches your chrome install
   - You can find the current chrome version by: [chrome://settings/help](chrome://settings/help) -> "Version"
@@ -17,7 +19,7 @@ This script performs a specific task using Selenium and sends the result via ema
 - Make sure to get the 32 bit version of the driver.
 - Replace "chromedriver.exe" in the main directory.
 
-## Installation
+## ⬇️ Installation
 
 1. Clone the repository or download the script.
 
@@ -39,12 +41,15 @@ pip install -r requirements.txt
    ### Login Credentials for MyTime
 
    ```
+   ### User Info - Change username
+   ```
    target_username = "target_user_username"
    target_password = "target_user_password"
    ```
 
    ### Email Details
 
+   ```
    ```
    receiver_emails = "["email_1", "email_2"]"
    subject = "Target Schedule"
@@ -57,7 +62,7 @@ pip install -r requirements.txt
    smtp_password = "enter_password"
    ```
 
-## Usage
+## 🪴 Usage
 
 1. Run the script with `run.bat` **or**:
 ```batch
@@ -73,7 +78,7 @@ python run.py
    - Send the saved schedule via email.
 2. Follow the prompts in the terminal to proceed or exit.
 
-### Obtaining Google Email SMTP Server Details
+## 📧 Obtaining Google Email SMTP Server Details
 
 To obtain the SMTP server details for Google email, follow these steps:
 
@@ -96,7 +101,7 @@ To obtain the SMTP server details for Google email, follow these steps:
     - To find the SMTP server port number for your email provider, you can refer to their documentation or support resources.
     - Once you have the port number, update the `smtp_port` variable in the `.env` file, replacing `###` with the appropriate port number.
 
-## License
+
+## 🪪 License
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/YelloNolo/Target-TimeTransfer-Public">Target TimeTransfer Public</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yello.page">Alec Murphy</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>
-````
