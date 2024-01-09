@@ -1,0 +1,5 @@
+.env
+target_schedule.txt
+/venv
+/conda-env
+/chrome-data
