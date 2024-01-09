@@ -49,7 +49,7 @@ Note: This script is buggy, and as I no longer work at target, I will not be mai
    - Send the saved schedule via email.
 3. Follow the prompts in the terminal to proceed or exit.
 
-### 📧 Obtaining Google Email SMTP Server Details
+## 📧 Obtaining Google Email SMTP Server Details
 
 To obtain the SMTP server details for Google email, follow these steps:
 
