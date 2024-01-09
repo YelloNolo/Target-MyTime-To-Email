@@ -6,18 +6,18 @@ Note: This script is buggy, and as I no longer work at target, I will not be mai
 
 ## 📃 Prerequisites
 
-- Python 3.10.11
-- Chrome (Browser must be installed)
-- ChromeDriver (check notes)
-- Conda: https://docs.conda.io/projects/miniconda/en/latest/
+-   Python 3.10.11
+-   Chrome (Browser must be installed)
+-   ChromeDriver (check notes)
+-   Conda: https://docs.conda.io/projects/miniconda/en/latest/
 
 ## 📒 Notes
 
-- You may need to update "chromedriver.exe" to a version that matches your chrome install
-  - You can find the current chrome version by: [chrome://settings/help](chrome://settings/help) -> "Version"
-- You can find the lastest driver here: https://googlechromelabs.github.io/chrome-for-testing/#stable or https://chromedriver.chromium.org/downloads
-- Make sure to get the 32 bit version of the driver.
-- Replace "chromedriver.exe" in the main directory.
+-   You may need to update "chromedriver.exe" to a version that matches your chrome install
+    -   You can find the current chrome version by: [chrome://settings/help](chrome://settings/help) -> "Version"
+-   You can download the latest driver here: https://googlechromelabs.github.io/chrome-for-testing/#stable or https://chromedriver.chromium.org/downloads
+-   Make sure to get the 32-bit version of the driver.
+-   Replace "chromedriver.exe" in the main directory.
 
 ## ⬇️ Installation
 
@@ -36,46 +36,46 @@ pip install -r requirements.txt
 ```
 
 3. Clone `example.env` to `.env`.
+
 4. Edit the `.env` and update the following variables:
 
-   ### Login Credentials for MyTime
+    ### Login Credentials for MyTime
 
-   ```
-   ### User Info - Change username
-   ```
-   target_username = "target_user_username"
-   target_password = "target_user_password"
-   ```
+    ```
+    target_username = "target_user_username"
+    target_password = "target_user_password"
+    ```
 
-   ### Email Details
+    ### Email Details
 
-   ```
-   ```
-   receiver_emails = "["email_1", "email_2"]"
-   subject = "Target Schedule"
-   ```
+    ```
+    receiver_emails = "["email_1", "email_2"]"
+    subject = "Target Schedule"
+    ```
 
-   ### SMTP Mail
+    ### SMTP Mail
 
-   ```
-   smtp_username = "enter_email"
-   smtp_password = "enter_password"
-   ```
+    ```
+    smtp_username = "enter_email"
+    smtp_password = "enter_password"
+    ```
 
 ## 🪴 Usage
 
 1. Run the script with `run.bat` **or**:
+
 ```batch
 conda activate ./conda-env
 python run.py
 ```
+
 1. The script will perform the following steps:
-   - Check the last modification date of a file.
-   - Prompt the user to continue or exit based on the file's modification date.
-   - Initialize a Chrome driver and open a specified URL.
-   - Perform login and verification steps if necessary.
-   - Scrape the web page and save the schedule to a file.
-   - Send the saved schedule via email.
+    - Check the last modification date of a file.
+    - Prompt the user to continue or exit based on the file's modification date.
+    - Initialize a Chrome driver and open a specified URL.
+    - Perform login and verification steps if necessary.
+    - Scrape the web page and save the schedule to a file.
+    - Send the saved schedule via email.
 2. Follow the prompts in the terminal to proceed or exit.
 
 ## 📧 Obtaining Google Email SMTP Server Details
@@ -93,14 +93,13 @@ To obtain the SMTP server details for Google email, follow these steps:
 9. Use the generated app password as the `smtp_password` in the `.env` file.
 10. Obtain the SMTP Server Port Number:
     - The SMTP server port number is specific to your email service provider. Here are some common port numbers:
-      - Gmail: Port 587 or 465 (TLS/SSL)
-      - Outlook.com/Hotmail.com: Port 587 or 25
-      - Yahoo Mail: Port 587 or 465 (SSL)
-      - AOL Mail: Port 587 or 465 (SSL)
-      - Office 365: Port 587 or 25
+        - Gmail: Port 587 or 465 (TLS/SSL)
+        - Outlook.com/Hotmail.com: Port 587 or 25
+        - Yahoo Mail: Port 587 or 465 (SSL)
+        - AOL Mail: Port 587 or 465 (SSL)
+        - Office 365: Port 587 or 25
     - To find the SMTP server port number for your email provider, you can refer to their documentation or support resources.
     - Once you have the port number, update the `smtp_port` variable in the `.env` file, replacing `###` with the appropriate port number.
-
 
 ## 🪪 License
 
