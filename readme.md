@@ -24,7 +24,7 @@ Note: This script is buggy, and as I no longer work at target, I will not be mai
 1. Clone the repository or download the script.
 
 ```
-git clone https://github.com/YelloNolo/Target-MyTime-To-Email
+git clone https://github.com/YelloNox/Target-MyTime-To-Email
 ```
 
 2. Run `setup.bat` **or** install the script with the following commands:
@@ -103,4 +103,4 @@ To obtain the SMTP server details for Google email, follow these steps:
 
 ## 🪪 License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/YelloNolo/Target-MyTime-To-Email">Target MyTime To Email</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yello.page">Alec Murphy</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/YelloNox/Target-MyTime-To-Email">Target MyTime To Email</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://www.yello.page">Alec Murphy</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"></a></p>
